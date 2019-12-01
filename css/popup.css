@@ -1,0 +1,7 @@
+body {
+    min-width: 580px;
+    padding: 10px;
+}
+#resultBox {
+    color: red;
+}
