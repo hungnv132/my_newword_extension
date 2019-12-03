@@ -2,7 +2,7 @@
   "name": "My New Word",
   "version": "1.0",
   "description": "Save My New Word",
-  "permissions": ["tabs", "activeTab", "declarativeContent", "storage", "contextMenus"],
+  "permissions": ["tabs", "activeTab", "declarativeContent", "storage", "http://www.makeq.net/"],
   "background": {
     "scripts": ["js/jquery-3.4.1.min.js", "js/background.js"],
     "persistent": false

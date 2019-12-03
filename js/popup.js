@@ -4,17 +4,16 @@
 
 'use strict';
 
-let createWordAPI = 'http://localhost:9999/api/v2/words/';
+let createWordAPI = '';
 
-let wordName 	= $("#wordName");
-let vietnamese 	= $("#vietnamese");
-let wordMean1 	= $("#wordMean1");
-let wordMean2 	= $("#wordMean2");
-let tags 		= $("#tags");
-let wordType	= $("#wordType");
-let btnSubmit	= $("#btnSubmit");
-let resultBox	= $("#resultBox");
-
+let wordName 	= $("#wordForm #wordName");
+let vietnamese 	= $("#wordForm #vietnamese");
+let wordMean1 	= $("#wordForm #wordMean1");
+let wordMean2 	= $("#wordForm #wordMean2");
+let tags 		= $("#wordForm #tags");
+let wordType	= $("#wordForm #wordType");
+let btnSubmit	= $("#wordForm #btnSubmit");
+let resultBox	= $("#wordForm #resultBox");
 
 function clearData() {
     wordName.val('');

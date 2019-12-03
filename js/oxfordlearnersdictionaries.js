@@ -1,8 +1,8 @@
 
 let wordName = $("#entryContent .top-container h2");
 let wordMeans = $("#entryContent .sn-gs span.def");
-wordName.css('background-color', 'green');
-wordMeans.css('background-color', 'green');
+// wordName.css('background-color', 'green');
+// wordMeans.css('background-color', 'green');
 
 chrome.storage.local.set(
 	{
