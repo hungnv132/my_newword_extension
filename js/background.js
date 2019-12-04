@@ -1,31 +1,17 @@
 'use strict';
 
-// chrome.runtime.onInstalled.addListener(function() {
-//   chrome.storage.sync.set({color: '#3aa757'}, function() {
-//     console.log('The color is green.');
-//   });
-//   chrome.browserAction.onClicked.addListener(function (tab) {
-//     console.log('click icon');
-//   });
-//   chrome.contextMenus.create({
-//     "id": "sampleContextMenu",
-//     "title": "Sample Context Menu",
-//     "contexts": ["selection"]
-//   });
-  
-//   chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
-//     console.log("something happening from the extension");
-//     var data = request.data || {};
-//     var linksList = document.querySelectorAll('a');
-//     [].forEach.call(linksList, function(header) {
-//         header.innerHTML = request.data;
-//     });
-//     sendResponse({data: data, success: true});
-//   });
-  
-// });
+chrome.runtime.onInstalled.addListener(function() {
+    chrome.contextMenus.create({
+        "id": "SearchOnOxford",
+        "title": "Search on OxfordLearnerDictionary",
+        "contexts": ["selection"]
+    });
 
-
-
-
- 
+    chrome.contextMenus.onClicked.addListener(function (clickedData) {
+        if (clickedData.menuItemId == "SearchOnOxford" && clickedData.selectionText) {
+            let searchURL = "https://www.oxfordlearnersdictionaries.com/search/english/?q="
+            searchURL += clickedData.selectionText
+            chrome.tabs.create({ url: searchURL });
+        }
+    });
+});
