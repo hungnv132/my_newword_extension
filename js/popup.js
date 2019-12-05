@@ -61,7 +61,7 @@ function preparePayload() {
     let payload = {
         name: getWordName(),
         vietnamese: vietnamese.val().trim() || null,
-        type: wordType.val(),
+        type: parseInt(wordType.val()),
     }
     if (wordMean1.val()) {
         means.push(wordMean1.val())
