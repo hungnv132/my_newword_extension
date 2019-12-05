@@ -26,7 +26,7 @@ function clearData() {
 };
 
 function getWordName() {
-    return wordName.val().replace(' ', '');
+    return wordName.val().trim();
 }
 
 function loadDataFromStorage() {
@@ -55,12 +55,12 @@ function validateForm() {
 }
 
 function preparePayload() {
-    let tagValue = tags.val();
+    let tagValue = tags.val().trim();
     let means = []
 
     let payload = {
         name: getWordName(),
-        vietnamese: vietnamese.val() || null,
+        vietnamese: vietnamese.val().trim() || null,
         type: wordType.val(),
     }
     if (wordMean1.val()) {
