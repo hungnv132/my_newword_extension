@@ -1,6 +1,6 @@
 
-let wordName = $("#entryContent .top-container h2");
-let wordMeans = $("#entryContent .sn-gs span.def");
+let wordName = $("#entryContent .top-container .headword");
+let wordMeans = $("#entryContent .senses_multiple span.def");
 // wordName.css('background-color', 'green');
 // wordMeans.css('background-color', 'green');
 
